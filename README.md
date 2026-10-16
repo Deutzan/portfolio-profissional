@@ -23,7 +23,7 @@ My goal is to continuously improve my programming skills, build high-quality sol
 
 My academic background includes programming, software projects, and educational robotics. I also study languages to broaden my knowledge and professional opportunities.
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 As tecnologias utilizadas no desenvolvimento deste portfólio são:
 
@@ -31,7 +31,7 @@ As tecnologias utilizadas no desenvolvimento deste portfólio são:
 - **CSS3:** estilização e organização visual das páginas.
 - **JavaScript:** implementação de funcionalidades e interações.
 
-## 🚀 Projetos
+## Projetos
 
 ### AEDS II — Algoritmos e Estruturas de Dados
 
@@ -90,7 +90,7 @@ Este projeto utiliza HTML, CSS e JavaScript. Se o repositório possuir um arquiv
 
 Não é necessário instalar dependências com `npm` para um site estático simples. Caso o projeto utilize alguma ferramenta adicional, as instruções deverão ser ajustadas.
 
-## 📌 Próximas etapas
+## Próximas etapas
 
 - Publicar o portfólio na Vercel.
 - Adicionar o link do site publicado.
