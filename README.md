@@ -1,4 +1,4 @@
-##O README deve conter: ##
+#O README deve conter: #
 • Listagem das tecnologias utilizadas
 • Relação das dependências e bibliotecas/frameworks usados;
 • Estrutura de diretórios do projeto;
