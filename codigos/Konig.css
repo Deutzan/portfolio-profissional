@@ -1,0 +1,502 @@
+/* 1. CORES E FONTES */
+:root {
+  --bg: #F2F6FA;
+  --surface: #FFFFFF;
+  --ink: #15223B;
+  --muted: #56627B;
+  --line: #DCE4EE;
+  --accent: #2D6CDF;
+  --accent-soft: #E3ECFC;
+
+  --head: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --body: "Figtree", "Segoe UI", Arial, sans-serif;
+
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1626;
+    --surface: #16213A;
+    --ink: #EAF0FA;
+    --muted: #9AA8C2;
+    --line: #27355A;
+    --accent: #6E9BFF;
+    --accent-soft: #1D2D54;
+    color-scheme: dark;
+  }
+}
+
+/* 2. BASE DA PÁGINA */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  scroll-padding-top: calc(88px + env(safe-area-inset-top, 0px));
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.65;
+  font-size: 1.02rem;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--surface);
+  z-index: 10;
+}
+
+/* 3. MENU DO TOPO */
+header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 9;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+nav {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav a {
+  flex: 1 1 150px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--ink);
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a small {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  outline: none;
+}
+
+nav a:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* 4. ESTRUTURA GERAL E CARTÕES */
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 72px 0 28px;
+}
+
+h2 {
+  font-family: var(--head);
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  line-height: 1.15;
+  margin: 0 0 26px;
+  letter-spacing: -0.01em;
+}
+
+h2 span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 36px;
+  padding: 34px 40px;
+  box-shadow: 0 10px 30px -18px rgba(21, 34, 59, 0.25);
+}
+
+.card p {
+  margin: 0;
+  max-width: 70ch;
+}
+
+.card p + p {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+}
+
+/* 5. SOBRE MIM */
+.hero {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.photo {
+  aspect-ratio: 1 / 1.05;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.3s;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo:hover {
+  box-shadow: 0 0 28px 2px var(--accent);
+}
+
+/* 6. IDIOMAS */
+.languages {
+  margin-top: 28px;
+}
+
+.languages h3 {
+  font-family: var(--head);
+  font-size: 1.3rem;
+  margin: 0 0 20px;
+}
+
+.languages h3 span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.languages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px 32px;
+}
+
+.lang-name span,
+.lang-level span {
+  color: var(--muted);
+}
+
+.lang-level {
+  font-size: 0.92rem;
+  margin: 2px 0 10px;
+}
+
+.meter {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--accent-soft);
+  overflow: hidden;
+}
+
+.meter i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--accent), #14A38F);
+}
+
+/* 7. WAKATIME */
+.wakatime {
+  margin-top: 28px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wakatime h3 {
+  font-family: var(--head);
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+}
+
+.waka-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.waka-badge {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+
+.waka-charts {
+  flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--line);
+}
+
+.waka-panel h4 {
+  font-family: var(--head);
+  font-size: 1.05rem;
+  margin: 0 0 16px;
+}
+
+.waka-panel h4 span,
+.waka-msg span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.waka-msg {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.waka-langs {
+  display: grid;
+  gap: 12px;
+}
+
+.lang-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+
+.lang-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.lang-pct {
+  color: var(--muted);
+}
+
+.waka-days {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 170px;
+}
+
+.day-col {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.day-bar {
+  width: 100%;
+  max-width: 44px;
+  min-height: 4px;
+  border-radius: 10px 10px 4px 4px;
+  background: linear-gradient(180deg, var(--accent), #14A38F);
+  transition: height 0.6s;
+}
+
+.day-bar.empty {
+  background: var(--line);
+}
+
+.day-time {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+
+/* 8. BRILHO AO PASSAR O MOUSE */
+.glow {
+  --glow: var(--accent);
+  --x: 50%;
+  --y: 50%;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.25s;
+  background: radial-gradient(
+    circle 110px at var(--x) var(--y),
+    color-mix(in srgb, var(--glow) 38%, transparent),
+    transparent 70%
+  );
+}
+
+.glow:hover,
+.glow:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--glow);
+  outline: none;
+  box-shadow:
+    0 0 0 1px var(--glow),
+    0 0 26px -2px color-mix(in srgb, var(--glow) 65%, transparent);
+}
+
+.glow:hover::before,
+.glow:focus-visible::before {
+  opacity: 1;
+}
+
+.glow:focus-visible {
+  box-shadow:
+    0 0 0 3px var(--glow),
+    0 0 26px -2px var(--glow);
+}
+
+/* 9. PROJETOS */
+.projects {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tile {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.tile svg {
+  width: 44px;
+  height: 44px;
+}
+
+/* 10. CONTATOS */
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 26px 14px;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-weight: 600;
+}
+
+.contacts svg {
+  width: 46px;
+  height: 46px;
+}
+
+.c-github   { --glow: #8B5CF6; }
+.c-gmail    { --glow: #EA4335; }
+.c-linkedin { --glow: #0A66C2; }
+.c-whatsapp { --glow: #25D366; }
+
+/* 11. RODAPÉ */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding: 56px 20px 40px;
+}
+
+/* 12. CELULAR */
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .photo {
+    max-width: 220px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .card {
+    padding: 26px 24px;
+    border-radius: 28px;
+  }
+
+  nav a {
+    flex-basis: calc(50% - 8px);
+  }
+
+  section {
+    padding-top: 56px;
+  }
+}
+
+/* 13. ACESSIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
