@@ -5,7 +5,7 @@ Este repositório contém o código-fonte do meu portfólio profissional, desenv
 ## Acesso ao projeto
 
 - **Repositório:** [portfolio-profissional](https://github.com/Deutzan/portfolio-profissional)
-- **Site publicado:** [Vercel](https://portfolio-profissional-git-main-ymca-4071.vercel.app/](https://portfolio-profissional-git-main-ymca-4071.vercel.app/).
+- **Site publicado:** (https://portfolio-profissional-git-main-ymca-4071.vercel.app/](https://portfolio-profissional-git-main-ymca-4071.vercel.app/).
 
 ## Sobre mim
 
