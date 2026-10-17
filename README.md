@@ -5,7 +5,7 @@ Este repositório contém o código-fonte do meu portfólio profissional, desenv
 ## Acesso ao projeto
 
 - **Repositório:** [portfolio-profissional](https://github.com/Deutzan/portfolio-profissional)
-- **Site publicado:** Em breve — publicação na Vercel ainda pendente.
+- **Site publicado:** [Vercel]([https://portfolio-profissional-git-main-ymca-4071.vercel.app/](https://portfolio-profissional-git-main-ymca-4071.vercel.app/)).
 
 ## Sobre mim
 
@@ -89,12 +89,10 @@ Este projeto utiliza HTML, CSS e JavaScript. Se o repositório possuir um arquiv
 
 Não é necessário instalar dependências com `npm` para um site estático simples. Caso o projeto utilize alguma ferramenta adicional, as instruções deverão ser ajustadas.
 
-## Próximas etapas
+## Vercel
 
-- Publicar o portfólio na Vercel.
-- Adicionar o link do site publicado.
-- Incluir capturas de tela dos projetos.
-- Ampliar a seção de projetos com novos trabalhos acadêmicos.
+- portfólio na Vercel.
+- https://portfolio-profissional-git-main-ymca-4071.vercel.app/
 
 ---
 
