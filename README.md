@@ -67,7 +67,7 @@ Também tive contato com motores, sensores, circuitos elétricos e fundamentos d
 - **E-mail:** [luisdias29agosto@gmail.com](mailto:luisdias29agosto@gmail.com)
 - **WhatsApp:** [+55 31 97564-4839](https://wa.me/5531975644839)
 - **GitHub:** [Deutzan](https://github.com/Deutzan)
-- **Linkedin:** [Luís Felipe Dias]([https://github.com/Deutzan](https://www.linkedin.com/in/lu%C3%ADs-felipe-dias-3634a1388))
+- **Linkedin:** [Luís Felipe Dias]((https://www.linkedin.com/in/lu%C3%ADs-felipe-dias-3634a1388))
 
 ## Como executar localmente
 
